@@ -6,10 +6,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="A place for coding and beer! or maybe not">
-    <meta name="keywords" content="Code,code,tutorials,programming,Free Web tutorials,java,JavaScript,php,html,sql,BEER,how to,how">
+    <meta name="keywords" content="FreakLearn,">
     <meta name="author" content="FreakLearn">
 
-    <title>FreakLearn -Home</title>
+    <title>FreakLearn -Java MySQL</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -60,17 +60,17 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="../index.html">FreakLearn</a>
+        <a class="navbar-brand" href="../index.html"><img src="../img/fl_logo.png" alt="logo" style="width:50px;">FreakLearn</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#">Soon!</a>
+              <a class="nav-link" href="#">JAVA</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Soon!</a>
+              <a class="nav-link" href="#">PHP</a>
             </li>
           </ul>
         </div>
@@ -80,7 +80,8 @@
     <header class="masthead text-center text-white" style="height: 100px;">
       <div class="masthead-content">
         <div class="container">
-          <h1 class="masthead-heading mb-0">FreakLearn</h1>
+           
+          <h1 class="masthead-heading mb-0">FreakLearn<img src="../img/fl_logo.png" alt="logo" style="width:60px; margin-top: 50px;">com</h1>
           <p>Tutorials, Developments, Code !! and BEER !! or not </p>
         </div>
       </div>
@@ -101,11 +102,19 @@
           <div class="col-lg-9">
             <div class="p-5">
               <h2 class="display-4">Java Connection to mysql</h2>
+              <br><p>Welcome to our first tutorial FreakLearn: Carlos Gallegos, Have Fun!</p>
               <p>What do we need and how to do a basic select to your database</p><br>
               <small><p>Use any apache server I'll be using WAMP</p></small>
             </div>
           </div>
-          <div class="col-lg-12 center-col">
+          <div class="col-lg-12">
+              <div class="p-5">
+                <h2 >Before starting, install:</h2>
+                  <img src="img_java/tutorial1_javaSQL/wamp-xampp.png" alt="" style="width:160px;">
+                  <img src="../img/fl_welcome.png" alt="logo" style="width:160px;">
+              </div>
+          </div>
+          <div class="col-lg-12 center-col" style="background-color: #9fcde73f;">
               <div class="p-5">
                 <h2 class="display-6">So we start</h2>
                 <p>Download MySQL connector</p>
@@ -143,6 +152,105 @@
           </div>
           <img src="img_java/tutorial1_javaSQL/r3.jpg" alt="Java create project">        
         </div><br>
+
+        <div class="row align-items-center">
+            <div class="col-lg-4"></div>
+            <div class="col-lg-4">
+              <h3 class="secound-part-title">Packages</h3>
+            </div>
+            <div class="col-lg-4"></div>
+            <div class="col-lg-12 ">
+                <p class="content-text">             
+                    And we add two packages: <br>
+                    <ul>
+                      <li>connect_mysql: for you to reuse in any other project we separate the connector </li>
+                      <li>practica1: only if you don’t already have it as a main page java file, here is where the app reads the file at start.</li>
+                    </ul> 
+                    
+                    
+                    
+                </p>
+                <br><br>
+                
+              </div> 
+          </div><br>
+
+        <div class="row align-items-center" style="background-color: #9fcde725;">
+            <div class="col-lg-12 center-col">
+                <h3 class="secound-part-title">Import MySQL JAR</h3>
+              </div>
+            <div class="col-lg-12 ">
+                <p class="content-text">             
+                    Let’s import the mysql-connector jar into our project; you right click in the libraries folder and you select add Jar/Folder option like so:                    
+                </p>
+                <br><br>
+                
+              </div><br><br>
+              <img src="img_java/tutorial1_javaSQL/r4.jpg" alt="Java add jar"> <br><br>
+
+            
+            <div class="col-lg-12 center-col">
+              <h3 class="secound-part-title">connect_mysql</h3>
+            </div>
+            <div class="col-lg-12 center-col">
+                <p class="content-text">             
+                    In the package connect_mysql we created a file named connect.java where we are going to import the java.sql.* <br>
+                     library we just imported, in this file you got your connection that it’s going to use a driver, <br>
+                      the text written its default feel free to change any of the other parameters, user; your db user, <br>
+                       password and the url the first part leave it as it is then where you put the url in this case localhost: <br> 
+                       and the port you can change it to your own url followed by the name of the database, all the first variables <br>
+                       are configuration to start the driver so we create the function connect to execute the connection and another <br>
+                        function named getCon to return the Connection, because we are going to use this class in other files your dile should look like this: <br>
+                </p>
+                <br><br>
+                
+              </div>
+              <img src="img_java/tutorial1_javaSQL/r5.jpg" alt="Java add jar">  
+
+              <div class="col-lg-12 center-col">
+                  <h3 class="secound-part-title">practica1</h3>
+                </div>
+                <div class="col-lg-12 ">
+                    <p class="content-text">             
+                        The package named practica 1 contains the main file Practica1.java; in that file you import the package you just created (connect_mysql) and the file you need in this case connect.java 
+                        then you import the library from MySQL java.sql.* and then inside the main function you call the methods created for the consult and specify everything for it.                   
+                    </p>
+                    <br><br>
+                    <p>first we import our package and jar necesary for our connection</p>
+                    
+                  </div>
+                  <img src="img_java/tutorial1_javaSQL/r6.jpg" alt="Java add jar"> <br><br>
+                  <div class="col-lg-12 ">
+                      <p class="content-text">             
+                        then we call the function to execute the connection and retrive the connection with get con at our statement and then we execute the query, <br>
+                        then we print our result in the console. 
+                      </p>
+                      <br><br>            
+                      
+                    </div>
+                    <img src="img_java/tutorial1_javaSQL/r7.jpg" alt="Java add jar">  <br><br><br>
+                    <div class="col-lg-12 ">
+                        <p class="content-text">             <br>
+                          for last we see the result of our consult if any error it would be shown in the console too, now we see the consult printed. 
+                          <br>
+                          we press run and see it work (I hope so)
+                        </p>
+                        <br><br>            
+                        
+                      </div>
+                      <img src="img_java/tutorial1_javaSQL/r8.jpg" alt="Java add jar">
+
+              
+          </div><br>
+          <div class="col-lg-9">
+              <div class="p-5">
+                <h2 class="display-4">Thanks for reading!!!</h2>
+                <p>Have a break and a beer</p><br>
+              </div>
+              <img src="../img/fl_logo.png" alt="logo">
+            </div>
+            
+
         
       </div>
     </section>
